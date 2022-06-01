@@ -1,4 +1,19 @@
-### Next release
+### 1.0.0 (2022-05-31)
+
+* Code reorganisation: split lib and cli into separate folders. 
+
+* New header and scaling modules.
+
+* Example walkthrough, pairtools benchmark added.
+
+* phase: fix the bugs and introduce the option to infer from NM instead of AS. 
+  Example usage added.
+
+* parse: implemented complex walks parser that infers interacting pairs (parse) or
+  ligation junctions (parse2). It allows to store the pair type and pair index in a walk. 
+  For parse, the options `--walks-policy all --add-pair-index` will allow reporting
+  complex walks and properties of the pairs in walks. 
+
 * dedup: implemented in chunks with two new backends ("scipy", "sklearn"). Now allows to
   record the readID of the retained "parent" read from a duplicate cluster in an extra
   field in the file with duplicates. New backends rely on the header to define column
@@ -8,6 +23,7 @@
   different from the old "cython": now duplication is transitive (i.e. if read A is a
   duplicate of read B, and read B - of read C, reads A and C are now considered
   duplicates).
+
 ### 0.3.1 (2021-02-XX) ###
 
 * sample: a new tool to select a random subset of pairs
