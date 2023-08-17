@@ -58,7 +58,7 @@ class PairCounter(Mapping):
                 ** np.arange(
                     min_log10_dist, max_log10_dist + 0.001, log10_dist_bin_step
                 )
-            ).astype(np.int_),
+            ).astype(int),
         ]
 
         # establish structure of an empty _stat:
